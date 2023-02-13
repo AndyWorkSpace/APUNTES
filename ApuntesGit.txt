@@ -1,0 +1,96 @@
+Apuntes Git
+
+ESQUEMA
+
+working directory --> git add --> staging area --> git commit --> repository
+
+COMANDOS DE INFORMACION
+
+- git init: creará un nuevo repositorio GIT local.
+- gti add <file>: para pasar los archicos del working al staging area
+- git status: para saber el estado
+- git commit: para pasar del stagin a repository
+- git push: para subirlo a un servidor remoto
+- git pull: para tener los cambios que hicieron los demas desarrolladores
+- git clone: te hace una copia a tu working
+
+
+COMANDOS DE CONFIGURACION 
+
+$ git config --global user.name "Andy"
+$ git config --global user.email 192422@unsaac.edu.pe
+$ git config --global core.editor "code --wait"
+$ git config --global -e
+$ git config --global core.autocrlf input
+$ git config -h
+
+COMANDOS TERMINAR PARA MOVERNOS
+
+ls , para listar todas las carpetas
+pwd, para saber donde nos encontramos
+cd <directorio o carpeta (workspace/)> , para movernos
+cd .. , salir del directorio y retroceder a la carpeta anterior
+mkdir <nombre del directorio(miweb)>  , para crear un directorio
+git init , para inicializar a trabajar con git
+ls -a , para mostrar el archivo git y ocultos
+cd .git , para ver todos los archivos con los que trabajaremos
+code . , para que me habra la carpeta donde estoy en el visual code
+rm archivo2.txt , para eliminar archicos
+cat archivo2.txt  : nos muestra que hay dentro del documento
+
+
+COMANDOS GIT add
+
+git add archivo.txt
+git add archivo1.txt archivo2.txt
+git add .txt , agrega todos los archivos txt
+git add . , agrega todo
+
+COMANDOS GIT commit
+
+git commit -m "commit inicial"
+git commit  + Enter , nos pedira el nombre para guardarlo , guardamos y cerramos
+
+git commit -am "cambios" : sube todo defrente
+
+git rm archivo2.txt , se elimina y ya esta agregado, solo queda comitearlo
+git restore --staged archivo2.txt , para no pasarlo al directorio y recupearalo
+git restore archivo2.txt, para recuperar archivos que eliminamos.
+
+mv archivo1.txt(origen) archivo.txt(destino) , para cambiar el nombre
+
+PARA CONFIGURAR ARCHIVOS QUE SOLO TRABAJARAN EN GIT
+
+.env , nombre estandar para variables de entorno
+.gitignore :  archivos, carpetas o rutas que quiero ignorar
+
+git status -s , M = archivo que a sido modificado , ? = todavia no a sido agregado
+git diff ,  muestra en pantalla que dados estamos cambiando, tiene que estar antes de pasar al staged
+            para salir se aprieta "q"
+
+git diff --staged
+git log --oneline
+
+
+****************************************
+                RAMAS
+****************************************
+git branch  : para saber en que rama estamos o nos encontramos
+git checkout -b <nombre de la rama>(ramaAndy)  : para crear una nueva rama
+
+para poner poner los cambios de una ramaX a la ramaMain, tenemos que primero
+estar en la rama ramaMain  
+git merge <ramaX>  : para mezclar las actualizaciones
+git push -u origin rama : indicamos que queremos subir los archivos 
+                          -u para crear la rama , origin main donde indicamos que la rama origen se llame rama
+
+
+//// COMANDOS PARA TRABAJAR CON EL GIT //////////
+
+PARA DESCARGAR : git remote add origin htps:...........
+PARA SUBIR DESDE EL MAIN : git push -u origin main
+PARA DESCARGAR DESDE UNA RAMA: git pull origin ramaAndy
+PARA DESCARGAR DESDE EL MAIN :  git pull origin main
+PARA SUBIR DESDE UNA RAMA:
+git checkout -b ramaC
+git push -u origin ramaC
