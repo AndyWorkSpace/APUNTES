@@ -132,6 +132,31 @@ if (condition1) {
 }
 -----------------------------
 
+switch (lowercaseLetter) {
+  case "a":
+    console.log("A");
+    break;
+  case "b":
+    console.log("B");
+    break;
+}
+---------------------------------
+
+switch (num) {
+  case value1:
+    statement1;
+    break;
+  case value2:
+    statement2;
+    break;
+...
+  default:
+    defaultStatement;
+    break;
+}
+------------------------------------
+
+
 
 
 
