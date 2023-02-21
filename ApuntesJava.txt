@@ -156,6 +156,91 @@ switch (num) {
 }
 ------------------------------------
 
+OBJETOS
+
+const dogs = {
+  Fido: "Mutt",
+  Hunter: "Doberman",
+  Snoopie: "Beagle"
+};
+
+const myDog = "Hunter";
+const myBreed = dogs[myDog];
+console.log(myBreed);
+----------------------------------------
+
+Elimina propiedades en un objeto de JavaScript
+delete ourDog.bark;
+
+--------------------------------------------
+
+Usa objetos para hacer búsquedas
+const article = {
+  "title": "How to create objects in JavaScript",
+  "link": "https://www.freecodecamp.org/news/a-complete-guide-to-creating-objects-in-javascript-b0e2450655e8/",
+  "author": "Kaashan Hussain",
+  "language": "JavaScript",
+  "tags": "TECHNOLOGY",
+  "createdAt": "NOVEMBER 28, 2018"
+};
+
+const articleAuthor = article["author"];
+const articleLink = article["link"];
+
+const value = "title";
+const valueLookup = article[value];
+--------------------------------------------------
+
+Verifica las propiedades de un objeto
+const myObj = {
+  top: "hat",
+  bottom: "pants"
+};
+
+myObj.hasOwnProperty("top");
+myObj.hasOwnProperty("middle");
+--------------------------------------------------
+
+Accede a objetos anidados
+const ourStorage = {
+  "desk": {
+    "drawer": "stapler"
+  },
+  "cabinet": {
+    "top drawer": { 
+      "folder1": "a file",
+      "folder2": "secrets"
+    },
+    "bottom drawer": "soda"
+  }
+};
+
+ourStorage.cabinet["top drawer"].folder2;
+ourStorage.desk.drawer;
+-----------------------------------------------
+
+const ourPets = [
+  {
+    animalType: "cat",
+    names: [
+      "Meowzer",
+      "Fluffy",
+      "Kit-Cat"
+    ]
+  },
+  {
+    animalType: "dog",
+    names: [
+      "Spot",
+      "Bowser",
+      "Frankie"
+    ]
+  }
+];
+
+ourPets[0].names[1];
+ourPets[1].names[0];
+-----------------------------------------------
 
 
 
