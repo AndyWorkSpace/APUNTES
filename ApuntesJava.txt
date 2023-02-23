@@ -242,7 +242,94 @@ ourPets[0].names[1];
 ourPets[1].names[0];
 -----------------------------------------------
 
+Itera con el bucle "while" de JavaScript
+const ourArray = [];
+let i = 0;
 
+while (i < 5) {
+  ourArray.push(i);
+  i++;
+}
+--------------------------------------------------
 
+Itera con los bucles "for" de JavaScript
+const ourArray = [];
 
+for (let i = 0; i < 5; i++) {
+  ourArray.push(i);
+}
+--------------------------------------------------
 
+Itera a través de un arreglo con un bucle "for"
+const arr = [10, 9, 8, 7, 6];
+
+for (let i = 0; i < arr.length; i++) {
+   console.log(arr[i]);
+}
+-----------------------------------------------------
+
+Anida bucles "for"
+const arr = [
+  [1, 2], [3, 4], [5, 6]
+];
+
+for (let i = 0; i < arr.length; i++) {
+  for (let j = 0; j < arr[i].length; j++) {
+    console.log(arr[i][j]);
+  }
+}
+----------------------------------------------------
+
+Itera con el bucle "do...while" de JavaScript
+const ourArray = [];
+let i = 0;
+
+do {
+  ourArray.push(i);
+  i++;
+} while (i < 5);
+------------------------------------------------
+
+Genera fracciones aleatorias con JavaScript
+JavaScript tiene una función Math.random() que genera un número decimal aleatorio entre 0 (inclusivo) y 1 (exclusivo). Así que Math.random() puede devolver un 0 pero nunca devuelve un 1.
+
+Nota: Al igual que el almacenamiento de valores con el operador de asignación, todas las llamadas a la función se resolverán antes de que se ejecute el return, por lo que el return devuelve el valor de la función Math.random().
+
+--------------------------------------------------
+
+Utiliza la función "parseInt"
+La función parseInt() analiza una cadena y devuelve un entero. A continuación, te presentamos un ejemplo:
+
+const a = parseInt("007");
+----------------------------------
+
+Usa múltiples operadores condicionales (ternarios)
+
+function findGreaterOrEqual(a, b) {
+  if (a === b) {
+    return "a and b are equal";
+  }
+  else if (a > b) {
+    return "a is greater";
+  }
+  else {
+    return "b is greater";
+  }
+}
+
+function findGreaterOrEqual(a, b) {
+  return (a === b) ? "a and b are equal" 
+    : (a > b) ? "a is greater" 
+    : "b is greater";
+}
+---------------------------------------------
+function countup(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countup(n - 1);
+    countArray.push(n);
+    return countArray;
+  }
+}
+console.log(countup(5));
